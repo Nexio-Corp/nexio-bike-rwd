@@ -14,7 +14,7 @@
         right: 0;
         top: 4rem;
         background-color: #fff;
-        animation: fade_in 0.5s ease-in-out forwards;
+        animation: fade_in 0.3s ease-in-out forwards;
     }
     nav > div.links.active a {
         padding: 1rem 0;
@@ -29,9 +29,11 @@
     @keyframes fade_in {
         from {
             transform: scale(0.5);
+            opacity: 0;
         }
         to {
             transform: scale(1);
+            opacity: 1;
         }
     }
 }
