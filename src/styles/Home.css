@@ -1,4 +1,4 @@
-body {
+body:has(.home) {
     background-image: url('/static/Fundo.png');
     background-repeat: no-repeat;
     background-size: cover;
