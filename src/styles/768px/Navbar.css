@@ -26,6 +26,19 @@
     nav > div.links.active .login {
         width: 40%;
     }
+    nav > div.links.deactivating {
+        animation: fade_out 0.3s ease-in-out forwards;
+    }
+    @keyframes fade_out {
+        from {
+            transform: scale(1);
+            opacity: 1;
+        }
+        to {
+            transform: scale(0.5);
+            opacity: 0;
+        }
+    }
     @keyframes fade_in {
         from {
             transform: scale(0.5);

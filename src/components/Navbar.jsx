@@ -10,6 +10,18 @@ export default function Navbar() {
      */
     const linksDiv = useRef(null)
 
+    const toggleLinks = () => {
+        if ([...linksDiv.current.classList.values()].includes('active')) {
+            linksDiv.current.classList.add('deactivating')
+            setTimeout(() => {
+                linksDiv.current.classList.remove('active')
+                linksDiv.current.classList.remove('deactivating')
+            }, 300)
+        } else {
+            linksDiv.current.classList.add('active')
+        }
+    }
+
     return (
         <>
             <nav>
@@ -25,10 +37,7 @@ export default function Navbar() {
                         Entrar
                     </Link>
                 </div>
-                <div
-                    className="hamburger"
-                    onClick={() => linksDiv.current.classList.toggle('active')}
-                >
+                <div className="hamburger" onClick={toggleLinks}>
                     <HamburgerIcon />
                 </div>
             </nav>
