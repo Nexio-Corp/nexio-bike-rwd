@@ -1,5 +1,5 @@
 body {
-    background-image: url('../assets/fundo.png');
+    background-image: url('/static/Fundo.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
