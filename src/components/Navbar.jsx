@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import portoLogo from '../assets/porto.svg'
+import portoLogo from '/static/porto.svg'
 import '../styles/Navbar.css'
 import { GiHamburgerMenu as HamburgerIcon } from 'react-icons/gi'
 import { useRef } from 'react'
