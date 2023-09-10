@@ -9,7 +9,7 @@ export default function Home() {
                     <h1>Faça a vistoria da sua bike agora</h1>
                     <h3>Simples e rápido</h3>
                 </article>
-                <Link to={'/vistoria'}>Começar</Link>
+                <Link to={'/cadastro/bike'}>Começar</Link>
             </main>
         </>
     )
