@@ -1,4 +1,5 @@
 @import url('./1024px/Home.css');
+@import url('./425px/Home.css');
 body:has(.home) {
     background-image: url('/static/Fundo.png');
     background-repeat: no-repeat;
