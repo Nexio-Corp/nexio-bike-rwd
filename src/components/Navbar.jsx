@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import portoLogo from '/static/porto.svg'
 import '../styles/Navbar.css'
 import { GiHamburgerMenu as HamburgerIcon } from 'react-icons/gi'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 export default function Navbar() {
     /**
      * Variável que guarda a referencia do div que contém os links
@@ -10,17 +10,40 @@ export default function Navbar() {
      */
     const linksDiv = useRef(null)
 
+    /**
+     * Variável que guarda a referencia do div que contém o hamburger
+     * @type {React.MutableRefObject<HTMLDivElement>}
+     */
+    const hamburgerDiv = useRef(null)
+
     const toggleLinks = () => {
         if ([...linksDiv.current.classList.values()].includes('active')) {
-            linksDiv.current.classList.add('deactivating')
-            setTimeout(() => {
-                linksDiv.current.classList.remove('active')
-                linksDiv.current.classList.remove('deactivating')
-            }, 300)
+            closeLinks()
         } else {
             linksDiv.current.classList.add('active')
         }
     }
+    const closeLinks = () => {
+        linksDiv.current.classList.add('deactivating')
+        setTimeout(() => {
+            linksDiv.current.classList.remove('active')
+            linksDiv.current.classList.remove('deactivating')
+        }, 300)
+    }
+    useEffect(() => {
+        const closeMenu = e => {
+            if (
+                !hamburgerDiv.current.contains(e.target) &&
+                !linksDiv.current.contains(e.target)
+            ) {
+                closeLinks()
+            }
+        }
+        document.addEventListener('click', closeMenu)
+        return () => {
+            document.removeEventListener('click', closeMenu)
+        }
+    }, [])
 
     return (
         <>
@@ -37,7 +60,11 @@ export default function Navbar() {
                         Entrar
                     </Link>
                 </div>
-                <div className="hamburger" onClick={toggleLinks}>
+                <div
+                    className="hamburger"
+                    onClick={toggleLinks}
+                    ref={hamburgerDiv}
+                >
                     <HamburgerIcon />
                 </div>
             </nav>
