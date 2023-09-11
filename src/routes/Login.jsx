@@ -1,17 +1,23 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import portoLogoImg from '/static/porto.svg'
 import bikeGuyImg from '/static/bike-guy.svg'
 import { IoArrowBack } from 'react-icons/io5'
 import '../styles/user-form.css'
 export default function Login() {
+    const navigate = useNavigate()
     return (
         <>
             <main className="form-user">
                 <section>
                     <section className="top">
-                        <Link to={'/'}>
+                        <a
+                            onClick={e => {
+                                e.preventDefault
+                                navigate(-1)
+                            }}
+                        >
                             <IoArrowBack />
-                        </Link>
+                        </a>
                         <div className="img-div">
                             <img src={portoLogoImg} alt="Logo da Porto" />
                         </div>
