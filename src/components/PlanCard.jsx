@@ -16,7 +16,7 @@ export default function PlanCard(props) {
 				alt={props.altImage}
 			/>
             <ul>
-                
+                {/* <lista className="map"></lista> */}
             </ul>
 			<p className="plancard-title">{props.title}</p>
 			<p className="plancard-text">{props.text}</p>
