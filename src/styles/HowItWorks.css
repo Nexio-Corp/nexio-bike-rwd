@@ -10,7 +10,7 @@
 
 
 .how-it-works {
-    padding: 6.7rem 6rem 8.9rem;
+    padding: 6.7rem 6rem 8rem;
     text-align: center;
 }
 
@@ -37,4 +37,14 @@
 .container-infocards {
     display: flex;
     justify-content: space-around;
+}
+
+.container-blue{
+    background-color: #00A1FC;
+    position: fixed;
+    z-index: -1;
+    height: 40%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
 }
