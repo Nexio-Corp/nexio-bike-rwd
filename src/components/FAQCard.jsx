@@ -11,9 +11,12 @@ export default function FAQCard(props) {
             <div className="faqcard-text-box">
                 <p className="faqcard-text">{props.text}</p>
                 <div className="faqcard-list">
-                    {props.list}
+                    <ul>{props.list}</ul>
                 </div>
-                <p className="faqcard-subtext">{props.subtext}</p>
+                <p className="faqcard-subtext">{props.subtext}</p>  
+                <div className="faqcard-list">
+                    <ul>{props.list2}</ul>
+                </div>
             </div>
         </div>
     )
@@ -22,6 +25,4 @@ export default function FAQCard(props) {
 FAQCard.propTypes = {
     title: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    list: PropTypes.array.isRequired,
-    subtext: PropTypes.string.isRequired
 }
