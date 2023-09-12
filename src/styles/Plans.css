@@ -1,0 +1,17 @@
+.plans {
+    padding: 6.7rem 6rem 8rem;
+    text-align: center;
+}
+
+.plans-title-container h1 {
+    font-family: Inter;
+    font-size: 2.375rem;
+    font-weight: 700;
+    margin-bottom: 5rem;
+}
+
+
+.container-plancards {
+    display: flex;
+    justify-content: space-around;
+}
