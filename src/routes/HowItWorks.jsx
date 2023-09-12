@@ -33,6 +33,7 @@ export default function HowItWorks() {
 					text="Após fornecer suas informações, você só precisará enviar algumas fotos de diferentes ângulos da sua bike, e em questão de minutos, o seu seguro estará pronto."
 				/>
 			</div>
+			<div className="container-blue"></div>
 		</main>
 	);
 }
