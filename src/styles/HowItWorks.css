@@ -1,3 +1,14 @@
+#root:has(.how-it-works) {
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #ffffff 70.5%,
+        #00a1fc 29.5%,
+        #00a1fc 100%
+    );
+}
+
+
 .how-it-works {
     padding: 6.7rem 6rem 8.9rem;
     text-align: center;
