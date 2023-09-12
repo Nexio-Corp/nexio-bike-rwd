@@ -1,0 +1,27 @@
+.plancard-box {
+    width: 23.75rem;
+    height: 23.25rem;
+    border-radius: 1.375rem;
+    background: #F1F1F1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.5rem;
+    padding: 1rem;
+}
+
+.plancard-img {
+    height: 4.35rem;
+}
+
+.plancard-title {
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.plancard-text {
+    font-family: Inter;
+    font-size: 1.125rem;
+}
