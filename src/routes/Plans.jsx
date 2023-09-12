@@ -9,22 +9,36 @@ export default function Plans() {
 			</div>
 			<div className="container-plancards">
 				<PlanCard
-					sourceImage="/static/little-bike.svg"
+                    title="Mountain Bike"
+                    subtitle="Força e habilidade em meio a natureza"
+					sourceImage="/static/bike-mountain.png"
 					altImage="Desenho de uma bike"
-					title="Escolha seu plano"
-					text="Oferecemos o plano perfeito para se adequar ao seu perfil de ciclista. Faça a sua escolha e aproveite suas pedaladas com total tranquilidade e segurança."
+					text="Cobertura basica
+					Bike bagagem*
+					Subtração da bike**
+					Acidente pessoais individual
+					Garantia internacional
+					*A cobertura inclui a bicicleta segurada e a mala utilizada para transporte, desde que estejam comprovadamente sob a responsabilidade da companhia aérea ou rodoviária. Essa cobertura é válida durante o trajeto de ida e volta da viagem realizada pelo segurado.
+**Não haverá cobertura quando tratar-se de subtração parcial."
 				/>
 				<PlanCard
-					sourceImage="/static/form.svg"
+                    title="Performance"
+                    subtitle="Mais conforto e perfomance no seu pedal"
+					sourceImage="/static/bike-performance.png"
 					altImage="Desenho de um formulário sendo preenchido"
-					title="Preencha os seus dados"
-					text="Para inclusão na sua apólice, solicitaremos apenas algumas informações essenciais. Não se preocupe, o processo é rápido e simples!"
+					text="Cobertura para imprevistos
+					Pedalar em maior velocidade
+					Ideal para competições internacionais
+					Preferência por estradas pavimentadas ou superfícies lisas e sem irregularidades."
 				/>
 				<PlanCard
-					sourceImage="/static/clipboard.svg"
+                    title="Urbana"
+                    subtitle="As bikes urbanas aliam conforto e agilidade"
+					sourceImage="/static/bike-urbana.jpg"
 					altImage="Prancheta com checklist"
-					title="Faça a vistoria on-line"
-					text="Após fornecer suas informações, você só precisará enviar algumas fotos de diferentes ângulos da sua bike, e em questão de minutos, o seu seguro estará pronto."
+					text="Tranquilidade ao andar de bicicleta pelas ruas da cidade
+					Utilização da bike como meio de transporte para trabalho, faculdade 
+					Proteção abrangente para você, sua bicicleta e terceiros"
 				/>
 			</div>
 		</main>

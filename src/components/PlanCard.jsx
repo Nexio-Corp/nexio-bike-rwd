@@ -4,13 +4,13 @@ import '../styles/PlanCard.css'
 export default function PlanCard(props) {
     return (
         <div className="plancard-box">
+            <p className="plancard-title">{props.title}</p>
+            <p className="plancard-subtitle">{props.subtitle}</p>
             <img
                 className="plancard-img"
                 src={props.sourceImage}
                 alt={props.altImage}
             />
-            <p className="plancard-title">{props.title}</p>
-            <p className="plancard-subtitle">{props.subtitle}</p>
             <p className="plancard-text">{props.text}</p>
         </div>
     )
