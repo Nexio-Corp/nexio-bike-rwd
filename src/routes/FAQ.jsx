@@ -1,4 +1,4 @@
-import FAQCard from "../components/FaqCard";
+import FAQCard from "../components/FAQCard";
 import  "../styles/FAQ.css";
 
 export default function FAQ() {
@@ -7,18 +7,16 @@ export default function FAQ() {
             <div className="faq-title">
                 <h1>Dúvidas frequentes sobre o seguro</h1>  
             </div>
-            <div className="faq-cards-container">
-                <FAQCard
-                    title="Posso contratar o seguro de bike para bicicleta usada?"
-                    text="Oferecemos diversas opções de seguro para atender às suas necessidades:"
-                    list={list.map((item, i)=>(
-                        <ul key={i}>
-                            <li>{item}</li>
-                        </ul>
-                    ))}
-                    subtext="Com nossa ampla variedade de coberturas e serviços, você pode garantir a proteção adequada para o seu meio de transporte preferido. Seja qual for o modelo da sua bicicleta e o tempo de uso, temos a solução certa para você."
-                />
-            </div>
+            <FAQCard
+                title="Posso contratar o seguro de bike para bicicleta usada?"
+                text="Oferecemos diversas opções de seguro para atender às suas necessidades:"
+                list={list.map((item, i)=>(
+                    <ul key={i}>
+                        <li>{item}</li>
+                    </ul>
+                ))}
+                subtext="Com nossa ampla variedade de coberturas e serviços, você pode garantir a proteção adequada para o seu meio de transporte preferido. Seja qual for o modelo da sua bicicleta e o tempo de uso, temos a solução certa para você."
+            />
         </main>
     )
 }

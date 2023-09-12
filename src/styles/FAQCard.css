@@ -1,0 +1,20 @@
+.faqplus{
+    color: black;
+    font-weight: 700;
+}
+.faqcard-list{
+    padding: 1.3rem;
+}
+.faqcard-text-box{
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid #d9d9d9;
+}
+.faqcard-title-box{
+    width: 100%;
+    display: inline-flex;
+    background-color: #D9D9D9;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
