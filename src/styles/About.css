@@ -1,24 +1,23 @@
-@import url('./768px/BikeSurvey.css');
+@import url('./768px/About.css');
 
 .equipe{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 10% ;
+}
+.equipe h1{
+    padding-top: 2rem;
 }
 
 .integrantes{
     display: flex;
-    padding: 60px;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 4rem;
+    height: 30rem;
 }
-.adrian{
-    
-}
-
-
-
 
 img{
-    width: 100px;
+    width: 6.4rem;
 }

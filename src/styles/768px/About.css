@@ -1,0 +1,7 @@
+@import url('../About.css');
+
+@media (max-width: 768px){
+    .integrantes{
+        flex-direction: column;
+    }
+}
