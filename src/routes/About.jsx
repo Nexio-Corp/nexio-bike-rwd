@@ -1,6 +1,3 @@
-import perfilAdrian from "/static/adrian.png";
-import perfilCaua from "/static/adrian.png";
-
 import "../styles/About.css";
 import TeammateCard from "../components/TeammateCard";
 
@@ -17,34 +14,44 @@ export default function About() {
         </div>
         <div className="integrantes">
           <TeammateCard
-            sourceImage="/static/adrian.png"
+            sourceImage="/static/adrian.svg"
             altImage="Foto integrante Adrian"
             nome="Adrian Sivilha"
             rm="RM97784"
+            github="https://github.com/adrian-siv"
+            linkedin="#"
           ></TeammateCard>
           <TeammateCard
-            sourceImage="/static/adrian.png"
-            altImage="Foto integrante Adrian"
-            nome="Adrian Sivilha"
-            rm="RM97784"
+            sourceImage="/static/caua.svg"
+            altImage="Foto integrante Cauã"
+            nome="Cauã Alencar"
+            rm="RM98638"
+            github="https://github.com/CauaRojas"
+            linkedin="#"
           ></TeammateCard>
           <TeammateCard
-            sourceImage="/static/adrian.png"
-            altImage="Foto integrante Adrian"
-            nome="Adrian Sivilha"
-            rm="RM97784"
+            sourceImage="/static/jaci.svg"
+            altImage="Foto integrante Jaci"
+            nome="Jaci Teixeira"
+            rm="RM99627"
+            github="https://github.com/jaciteixeira"
+            linkedin="#"
           ></TeammateCard>
           <TeammateCard
-            sourceImage="/static/adrian.png"
-            altImage="Foto integrante Adrian"
-            nome="Adrian Sivilha"
-            rm="RM97784"
+            sourceImage="/static/pedro.svg"
+            altImage="Foto integrante Pedro"
+            nome="Pedro Paterno"
+            rm="RM99726"
+            github="https://github.com/PedroPaterno"
+            linkedin="#"
           ></TeammateCard>
           <TeammateCard
-            sourceImage="/static/adrian.png"
-            altImage="Foto integrante Adrian"
-            nome="Adrian Sivilha"
-            rm="RM97784"
+            sourceImage="/static/sabrina.svg"
+            altImage="Foto integrante Sabrina"
+            nome="Sabrina Faustino"
+            rm="RM99570"
+            github="https://github.com/SabrinaFaustino"
+            linkedin="#"
           ></TeammateCard>
         </div>
       </main>
