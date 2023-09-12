@@ -1,21 +1,16 @@
 import PropTypes from 'prop-types'
-import '../styles/InfoCard.css'
+import '../styles/FAQCard.css'
 
-export default function InfoCard(props) {
+export default function FAQCard(props) {
     return (
-        <div className="infocard-box">
-            <img
-                className="infocard-img"
-                src={props.sourceImage}
-                alt={props.altImage}
-            />
+        <div className="faqcard-box">
             <p className="infocard-title">{props.title}</p>
             <p className="infocard-text">{props.text}</p>
         </div>
     )
 }
 
-InfoCard.propTypes = {
+FAQCard.propTypes = {
     sourceImage: PropTypes.string.isRequired,
     altImage: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,

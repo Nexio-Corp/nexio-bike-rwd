@@ -1,0 +1,11 @@
+.faq {
+    padding: 6rem 6rem 8rem;
+    text-align: center;
+}
+
+.faq-title h1 {
+    font-family: Inter;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
