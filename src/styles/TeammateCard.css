@@ -1,5 +1,3 @@
-@import url('./768px/TeammateCard.css');
-
 .teammate-card{
     display: flex;
     flex-direction: column;

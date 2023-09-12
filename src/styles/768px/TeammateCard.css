@@ -1,7 +1,0 @@
-@import url('../TeammateCard.css');
-
-@media (max-width: 768px){
-    .teammate-card{
-        flex-direction: row;
-    }
-}
