@@ -1,0 +1,28 @@
+@import url('./768px/About.css');
+
+.equipe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+
+.integrantes{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 4rem;
+    height: 30rem;
+}
+
+img{
+    width: 6.4rem;
+}
