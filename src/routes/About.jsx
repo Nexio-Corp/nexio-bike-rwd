@@ -19,7 +19,7 @@ export default function About() {
             nome="Adrian Sivilha"
             rm="RM97784"
             github="https://github.com/adrian-siv"
-            linkedin="#"
+            linkedin="https://www.linkedin.com/in/adrian-sivilha/"
           ></TeammateCard>
           <TeammateCard
             sourceImage="/static/caua.svg"
@@ -27,7 +27,7 @@ export default function About() {
             nome="Cauã Alencar"
             rm="RM98638"
             github="https://github.com/CauaRojas"
-            linkedin="#"
+            linkedin="https://www.linkedin.com/in/cau%C3%A3-alencar-rojas-romero-02553b240/"
           ></TeammateCard>
           <TeammateCard
             sourceImage="/static/jaci.svg"
@@ -35,7 +35,7 @@ export default function About() {
             nome="Jaci Teixeira"
             rm="RM99627"
             github="https://github.com/jaciteixeira"
-            linkedin="#"
+            linkedin="https://www.linkedin.com/in/jaci-santos-31b381190/"
           ></TeammateCard>
           <TeammateCard
             sourceImage="/static/pedro.svg"
@@ -43,7 +43,7 @@ export default function About() {
             nome="Pedro Paterno"
             rm="RM99726"
             github="https://github.com/PedroPaterno"
-            linkedin="#"
+            linkedin="https://www.linkedin.com/in/pedro-paterno-221193268/"
           ></TeammateCard>
           <TeammateCard
             sourceImage="/static/sabrina.svg"
@@ -51,7 +51,7 @@ export default function About() {
             nome="Sabrina Faustino"
             rm="RM99570"
             github="https://github.com/SabrinaFaustino"
-            linkedin="#"
+            linkedin="https://www.linkedin.com/in/sabrina-faustino-118b94245/"
           ></TeammateCard>
         </div>
         <div className="repositorio-container">
