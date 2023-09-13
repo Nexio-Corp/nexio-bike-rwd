@@ -54,6 +54,10 @@ export default function About() {
             linkedin="#"
           ></TeammateCard>
         </div>
+        <div className="repositorio-container">
+          <p>Para acessar repositório do projeto</p>
+          <a href="https://github.com/Nexio-Corp/nexio-bike-rwd/tree/main" target="_blank"  rel="noreferrer">CLIQUE AQUI</a>
+        </div>
       </main>
     </>
   );

@@ -26,3 +26,18 @@
 img{
     width: 6.4rem;
 }
+
+.repositorio-container {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.repositorio-container p {
+    padding-bottom: 1rem;
+}
+
+.repositorio-container a {
+    color: #000;
+    font-weight: 700;
+}
