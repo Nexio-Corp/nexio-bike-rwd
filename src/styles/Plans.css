@@ -1,3 +1,4 @@
+@import url('./1024px/PlanCard.css');
 body {
         background-image: url('/static/plans-background.svg');
         background-repeat: no-repeat;
@@ -16,4 +17,5 @@ h1 {
 .plancards-container {
     display: flex;
     justify-content: space-evenly;
+    gap: 1rem;
 }
