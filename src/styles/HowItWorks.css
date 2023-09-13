@@ -1,3 +1,4 @@
+@import url('./1024px/HowItWorks.css');
 .how-it-works {
     padding: 6.7rem 6rem 8rem;
     text-align: center;
@@ -26,6 +27,12 @@
 .container-infocards {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.infocard-box{
+    border: 1px solid #545454;
 }
 
 .container-blue{
