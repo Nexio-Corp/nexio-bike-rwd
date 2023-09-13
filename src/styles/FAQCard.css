@@ -1,10 +1,11 @@
 .faqplus{
     color: black;
     font-weight: 700;
+    cursor: pointer;
 }
 
-.faqcard-list{
-    padding: 1.3rem;
+.faqcard-container{
+    margin-bottom: 1rem;
 }
 
 .faqcard-text-box{
@@ -18,6 +19,15 @@
     display: inline-flex;
     background-color: #D9D9D9;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem;
     border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.faqcard-list{
+    padding: 1rem;
+}
+
+.hidden{
+    display: none;
 }
