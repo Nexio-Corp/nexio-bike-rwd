@@ -4,16 +4,17 @@ import bikeGuyImg from '/public/static/bike-guy.svg'
 import { IoArrowBack } from 'react-icons/io5'
 import Link from 'next/link'
 import Image from 'next/image'
+import styles from '@/styles/user-form.module.css'
 export default function Login() {
     return (
         <>
-            <main className="form-user">
+            <main className={styles['form-user']}>
                 <section>
-                    <section className="top">
+                    <section className={styles['top']}>
                         <Link href={'/'}>
                             <IoArrowBack />
                         </Link>
-                        <div className="img-div">
+                        <div className={styles['img-div']}>
                             <Image
                                 width={300}
                                 height={300}

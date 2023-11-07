@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types'
 import Image from 'next/image'
-
+import styles from '@/styles/InfoCard.module.css'
 export default function InfoCard(props) {
     return (
-        <div className="infocard-box">
+        <div className={styles['infocard-box']}>
             <Image
                 width={300}
                 height={300}
-                className="infocard-img"
+                className={styles['infocard-img']}
                 src={props.sourceImage}
                 alt={props.altImage}
             />
-            <p className="infocard-title">{props.title}</p>
-            <p className="infocard-text">{props.text}</p>
+            <p className={styles['infocard-title']}>{props.title}</p>
+            <p className={styles['infocard-text']}>{props.text}</p>
         </div>
     )
 }

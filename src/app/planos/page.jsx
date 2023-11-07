@@ -1,10 +1,10 @@
 import PlanCard from '@/components/PlanCard'
-
+import styles from '@/styles/Plans.module.css'
 export default function Plans() {
     return (
         <>
             <h1>O plano ideal para você e sua bike</h1>
-            <div className="plancards-container">
+            <div className={styles['plancards-container']}>
                 <PlanCard
                     title="Mountain Bike"
                     subtitle="Força e habilidade em meio a natureza"

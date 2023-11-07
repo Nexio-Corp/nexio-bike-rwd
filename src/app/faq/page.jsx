@@ -1,9 +1,9 @@
 import FAQCard from '@/components/FAQCard'
-
+import styles from '@/styles/FAQ.module.css'
 export default function FAQ() {
     return (
-        <main className="faq">
-            <div className="faq-title">
+        <main className={styles['faq']}>
+            <div className={styles['faq-title']}>
                 <h1>Dúvidas frequentes sobre o seguro</h1>
             </div>
             <FAQCard

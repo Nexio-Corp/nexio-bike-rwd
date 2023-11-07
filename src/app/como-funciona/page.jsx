@@ -1,18 +1,18 @@
 import InfoCard from '@/components/InfoCard'
-
+import styles from '@/styles/HowItWorks.module.css'
 export default function HowItWorks() {
     return (
-        <main className="how-it-works">
-            <div className="how-it-works-title-container">
+        <main className={styles['how-it-works']}>
+            <div className={styles['how-it-works-title-container']}>
                 <h1>Faça seu seguro com passos simples e rápidos</h1>
             </div>
-            <div className="how-it-works-title-container">
+            <div className={styles['how-it-works-title-container']}>
                 <h2>
                     Sem dor de cabeça e longas burocracias, seu seguro na palma
                     da sua mão
                 </h2>
             </div>
-            <div className="container-infocards">
+            <div className={styles['container-infocards']}>
                 <InfoCard
                     sourceImage="/static/little-bike.svg"
                     altImage="Desenho de uma bike"
@@ -32,7 +32,7 @@ export default function HowItWorks() {
                     text="Após fornecer suas informações, você só precisará enviar algumas fotos de diferentes ângulos da sua bike, e em questão de minutos, o seu seguro estará pronto."
                 />
             </div>
-            <div className="container-blue"></div>
+            <div className={styles['container-blue']}></div>
         </main>
     )
 }

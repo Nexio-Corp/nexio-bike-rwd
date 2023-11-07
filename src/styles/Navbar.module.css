@@ -1,0 +1,107 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    padding: 1.2%;
+    justify-content: space-between;
+}
+.navbar > a {
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .links {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+.navbar > .links.active {
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        top: 4rem;
+        background-color: #fff;
+        animation: fade_in 0.3s ease-in-out forwards;
+    }
+}
+.navbar > .links.active a {
+    @media (max-width: 768px) {
+        padding: 1rem 0;
+        margin: 1rem 0;
+    }
+}
+.navbar > .links.active a:hover {
+    @media (max-width: 768px) {
+        transform: none;
+    }
+}
+.navbar > .links.active .login {
+    @media (max-width: 768px) {
+        width: 40%;
+    }
+}
+.navbar > .links.deactivating {
+    @media (max-width: 768px) {
+        animation: fade_out 0.3s ease-in-out forwards;
+    }
+}
+.navbar .links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 1.5%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+.navbar .links a:hover,
+.navbar > a:hover {
+    transform: scale(1.05);
+}
+.navbar .links .login {
+    background-color: #000;
+    color: #fff;
+    width: 12%;
+    border-radius: 1rem;
+}
+.navbar .links .login a {
+    width: 100%;
+    text-align: center;
+}
+.navbar .hamburger {
+    display: none;
+    font-size: 3rem;
+    cursor: pointer;
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+
+@keyframes fade_out {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+@keyframes fade_in {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

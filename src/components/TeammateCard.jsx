@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import Image from 'next/image'
-
+import styles from '@/styles/TeammateCard.module.css'
 export default function TeammateCard(props) {
     return (
-        <div className="teammate-card">
+        <div className={styles['teammate-card']}>
             <Image
                 width={300}
                 height={300}
@@ -12,7 +12,7 @@ export default function TeammateCard(props) {
             />
             <p>{props.nome}</p>
             <p>{props.rm}</p>
-            <div className="logo-box">
+            <div className={styles['logo-box']}>
                 <a href={props.github} target="_blank" rel="noreferrer">
                     <Image
                         width={300}

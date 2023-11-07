@@ -1,18 +1,18 @@
 'use client'
 import PropTypes from 'prop-types'
-
+import styles from '@/styles/FAQCard.module.css'
 export default function FAQCard(props) {
     return (
-        <div className="faqcard-container">
-            <div className="faqcard-title-box">
-                <p className="faqcard-title">{props.title}</p>
-                <p className="faqplus" onClick={MoreInfo}>
+        <div className={styles['faqcard-container']}>
+            <div className={styles['faqcard-title-box']}>
+                <p className={styles['faqcard-title']}>{props.title}</p>
+                <p className={styles['faqplus']} onClick={MoreInfo}>
                     +
                 </p>
             </div>
-            <div className="faqcard-text-box hidden">
-                <p className="faqcard-text">{props.text}</p>
-                <div className="faqcard-list">
+            <div className={styles['faqcard-text-box hidden']}>
+                <p className={styles['faqcard-text']}>{props.text}</p>
+                <div className={styles['faqcard-list']}>
                     <ul>
                         {Array.isArray(props.list) &&
                             props.list.length > 0 &&
@@ -21,7 +21,7 @@ export default function FAQCard(props) {
                             ))}
                     </ul>
                 </div>
-                <p className="faqcard-subtext">{props.subtext}</p>
+                <p className={styles['faqcard-subtext']}>{props.subtext}</p>
             </div>
         </div>
     )
