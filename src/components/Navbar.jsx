@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
-import portoLogo from '/static/porto.svg'
-import '../styles/Navbar.css'
+'use client'
+import portoLogo from '/public/static/porto.svg'
 import { GiHamburgerMenu as HamburgerIcon } from 'react-icons/gi'
 import { useEffect, useRef } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 export default function Navbar() {
     /**
      * Variável que guarda a referencia do div que contém os links
@@ -48,15 +49,20 @@ export default function Navbar() {
     return (
         <>
             <nav>
-                <Link to="/">
-                    <img src={portoLogo} alt="Logo da Porto" />
+                <Link href="/">
+                    <Image
+                        width={300}
+                        height={300}
+                        src={portoLogo}
+                        alt="Logo da Porto"
+                    />
                 </Link>
                 <div className="links" ref={linksDiv}>
-                    <Link to="/como-funciona">Como Funciona</Link>
-                    <Link to="/planos">Planos</Link>
-                    <Link to="/faq">Duvidas Frequentes</Link>
-                    <Link to="/nexio">Equipe</Link>
-                    <Link className="login" to="/login">
+                    <Link href="/como-funciona">Como Funciona</Link>
+                    <Link href="/planos">Planos</Link>
+                    <Link href="/faq">Duvidas Frequentes</Link>
+                    <Link href="/nexio">Equipe</Link>
+                    <Link className="login" href="/login">
                         Entrar
                     </Link>
                 </div>

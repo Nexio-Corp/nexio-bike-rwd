@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types'
-import '../styles/InfoCard.css'
+import Image from 'next/image'
 
 export default function InfoCard(props) {
     return (
         <div className="infocard-box">
-            <img
+            <Image
+                width={300}
+                height={300}
                 className="infocard-img"
                 src={props.sourceImage}
                 alt={props.altImage}
