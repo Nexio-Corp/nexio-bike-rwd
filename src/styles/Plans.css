@@ -1,0 +1,21 @@
+@import url('./1024px/PlanCard.css');
+body {
+        background-image: url('/static/plans-background.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+}
+
+h1 {
+    color: #1E1E1E;
+    font-size: 2.375rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.plancards-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
