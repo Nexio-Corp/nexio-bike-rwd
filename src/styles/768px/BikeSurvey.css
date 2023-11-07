@@ -1,5 +1,0 @@
-@media (max-width: 768px) {
-    #root > main.bike-survey .bike {
-        flex-direction: column;
-    }
-}

@@ -1,8 +1,0 @@
-@import url('../PlanCard.css');
-@import url('../Plans.css');
-
-@media (max-width: 1024px){
-    .plancards-container{
-        flex-wrap: wrap;
-    }
-}
