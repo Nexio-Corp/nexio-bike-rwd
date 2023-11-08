@@ -5,7 +5,7 @@ body:has(.plancards-container) {
     background-position: right;
 }
 
-.plancards-container ~ h1 {
+.planscards-h1 {
     color: #1e1e1e;
     font-size: 2.375rem;
     font-weight: 600;

@@ -18,32 +18,25 @@ export default function FAQ() {
             />
             <FAQCard
                 title="O seguro de bike oferece cobertura para furto?"
-                text=""
-                /*"O seguro de bicicleta não oferece cobertura para eventos simples, como o desaparecimento inexplicável da bicicleta ou situações de roubo que não deixem vestígios visíveis. Essas circunstâncias não estão contempladas na apólice de seguro para bicicletas."*/
+                text="O seguro de bicicleta não oferece cobertura para eventos simples, como o desaparecimento inexplicável da bicicleta ou situações de roubo que não deixem vestígios visíveis. Essas circunstâncias não estão contempladas na apólice de seguro para bicicletas."
             />
             <FAQCard
                 title="Quais são os documentos necessários para contratar o seguro de bike?"
-                text=""
-                /*"Em algumas situações, principalmente em caso de sinistro, a Porto solicitará a nota fiscal da bike. Caso tenha sido comprada no exterior, também pode ser necessário apresentar o documento que confirma o país de origem."*/
+                text="Em algumas situações, principalmente em caso de sinistro, a Porto solicitará a nota fiscal da bike. Caso tenha sido comprada no exterior, também pode ser necessário apresentar o documento que confirma o país de origem."
             />
             <FAQCard
                 title="O seguro de bike cobre qualquer tipo de acessório?"
-                text=""
-                /*"Os acessórios que possui cobertura:"
-                list={[
-                    "Ciclocomputadores",
-                    "GPS",
-                    "Velocímetros"
-                ]}
+                text="Os acessórios que possui cobertura:"
+                list={['Ciclocomputadores', 'GPS', 'Velocímetros']}
                 subtext="Os acessórios que não possui cobertura:"
                 list2={[
-                    "Capacetes",
-                    "Luvas",
-                    "Squeezes",
-                    "Mochilas",
-                    "Roupas",
-                    "Ferramentas"
-                ]}*/
+                    'Capacetes',
+                    'Luvas',
+                    'Squeezes',
+                    'Mochilas',
+                    'Roupas',
+                    'Ferramentas',
+                ]}
             />
         </main>
     )

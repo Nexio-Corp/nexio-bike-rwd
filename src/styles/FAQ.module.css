@@ -1,3 +1,10 @@
+body:has(.faq) {
+    background-image: url('/static/plans-background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
 .faq {
     padding: 6rem 10rem 8rem;
     text-align: center;
@@ -8,4 +15,3 @@
     font-weight: 700;
     margin-bottom: 3rem;
 }
-

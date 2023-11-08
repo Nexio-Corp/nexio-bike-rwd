@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
     title: 'Porto Seguro Bike',
     description: 'Uma experiencia Nexio Bike',
+    
 }
 
 export default function RootLayout({ children }) {

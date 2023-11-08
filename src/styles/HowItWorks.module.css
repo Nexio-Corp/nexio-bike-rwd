@@ -1,3 +1,9 @@
+body:has(.how-it-works) {
+    background-image: url('/static/plans-background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
 .how-it-works {
     padding: 6.7rem 6rem 8rem;
     text-align: center;
