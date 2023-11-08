@@ -1,10 +1,12 @@
 import PlanCard from '@/components/PlanCard'
-
+import styles from '@/styles/Plans.module.css'
 export default function Plans() {
     return (
         <>
-            <h1>O plano ideal para você e sua bike</h1>
-            <div className="plancards-container">
+            <h1 className={styles['planscards-h1']}>
+                O plano ideal para você e sua bike
+            </h1>
+            <div className={styles['plancards-container']}>
                 <PlanCard
                     title="Mountain Bike"
                     subtitle="Força e habilidade em meio a natureza"
@@ -12,14 +14,10 @@ export default function Plans() {
                     altImage="Imagem ilustrativa de uma pessoa praticando Mountain Bike"
                     list={[
                         'Cobertura basica',
-                        'Bike bagagem*',
-                        'Subtração da bike**',
+                        'Bike bagagem',
+                        'Subtração da bike',
                         'Acidente pessoais individual',
                         'Garantia internacional',
-                    ]}
-                    notes={[
-                        '*A cobertura inclui a bicicleta segurada e a mala utilizada para transporte, desde que estejam comprovadamente sob a responsabilidade da companhia aérea ou rodoviária. Essa cobertura é válida durante o trajeto de ida e volta da viagem realizada pelo segurado.',
-                        '**Não haverá cobertura quando tratar-se de subtração parcial.',
                     ]}
                 ></PlanCard>
                 <PlanCard

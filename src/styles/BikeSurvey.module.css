@@ -1,0 +1,39 @@
+main.bike-survey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #000;
+    width: 100%;
+    padding: 2%;
+}
+
+main.bike-survey .bikes {
+    margin-top: 2%;
+}
+main.bike-survey .bike {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    text-align: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+main.bike-survey .bike .bike-action {
+    width: 100%;
+}
+main.bike-survey .bike .bike-action button {
+    background-color: #00a1fc;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+main.bike-survey .bike .bike-action p {
+    font-size: 1.2rem;
+}

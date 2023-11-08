@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-import './globals.css'
+import '@/styles/index.css'
 import Navbar from '@/components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
     title: 'Porto Seguro Bike',
     description: 'Uma experiencia Nexio Bike',
+    
 }
 
 export default function RootLayout({ children }) {

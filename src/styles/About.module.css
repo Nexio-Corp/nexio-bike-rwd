@@ -1,0 +1,63 @@
+body:has(.equipe) {
+    background-image: url('/static/plans-background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.integrantes {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+.integrantes img {
+    @media (max-width: 768px) {
+        width: 40%;
+    }
+}
+
+.repositorio-container {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.repositorio-container p {
+    padding-bottom: 1rem;
+}
+
+.repositorio-container a {
+    color: #000;
+    font-weight: 700;
+}
+.teammate-card img {
+    @media (max-width: 768px) {
+        padding-top: 20%;
+        width: 13rem;
+    }
+}
+.logo-box {
+    @media (max-width: 768px) {
+        padding-top: 1rem;
+        gap: 1.2rem;
+    }
+}

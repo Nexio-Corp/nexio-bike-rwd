@@ -1,0 +1,17 @@
+body:has(.faq) {
+    background-image: url('/static/plans-background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.faq {
+    padding: 4rem;
+    text-align: center;
+}
+
+.faq-title h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}

@@ -1,17 +1,17 @@
 import TeammateCard from '@/components/TeammateCard'
-
+import styles from '@/styles/About.module.css'
 export default function About() {
     return (
         <>
-            <main className="equipe">
-                <div className="titulo">
+            <main className={styles['equipe']}>
+                <div className={styles['titulo']}>
                     <h1>Conheça nossa equipe</h1>
                     <p>
                         Uma equipe altamente eficiente, dedicada <br />
                         exclusivamente a buscar o melhor para cada cliente.
                     </p>
                 </div>
-                <div className="integrantes">
+                <div className={styles['integrantes']}>
                     <TeammateCard
                         sourceImage="/static/adrian.svg"
                         altImage="Foto integrante Adrian"
@@ -53,7 +53,7 @@ export default function About() {
                         linkedin="https://www.linkedin.com/in/sabrina-faustino-118b94245/"
                     ></TeammateCard>
                 </div>
-                <div className="repositorio-container">
+                <div className={styles['repositorio-container']}>
                     <p>Para acessar repositório do projeto</p>
                     <a
                         href="https://github.com/Nexio-Corp/nexio-bike-rwd/tree/main"

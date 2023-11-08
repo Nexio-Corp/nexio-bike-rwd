@@ -4,16 +4,17 @@ import bikeGuyImg from '/public/static/bike-guy.svg'
 import { IoArrowBack } from 'react-icons/io5'
 import Link from 'next/link'
 import Image from 'next/image'
-export default function Login() {
+import styles from '@/styles/user-form.module.css'
+export default function Cadastro() {
     return (
         <>
-            <main className="form-user">
+            <main className={styles['form-user']}>
                 <section>
-                    <section className="top">
+                    <section className={styles['top']}>
                         <Link href={'/'}>
                             <IoArrowBack />
                         </Link>
-                        <div className="img-div">
+                        <div className={styles['img-div']}>
                             <Image
                                 width={300}
                                 height={300}
@@ -22,16 +23,23 @@ export default function Login() {
                             />
                         </div>
                     </section>
-                    <h1>Bem-vindo(a) de volta</h1>
+                    <h1>Faça o seu cadastro</h1>
                     <form action="#" onSubmit={e => e.preventDefault()}>
-                        <input type="text" placeholder="Email" />
+                        <div className={styles['dual-input']}>
+                            <input type="text" placeholder="Nome" />
+                            <input type="text" placeholder="Email" />
+                        </div>
+                        <div className={styles['dual-input']}>
+                            <input type="text" placeholder="Telefone" />
+                            <input type="text" placeholder="CPF" />
+                        </div>
                         <input type="password" placeholder="Senha" />
-                        <a href="#">Esqueceu a senha?</a>
-                        <button type="submit">Entrar</button>
+                        <input type="password" placeholder="Confirmar senha" />
+                        <button type="submit">Cadastrar</button>
                     </form>
                     <span>
-                        Não tem uma conta ainda?
-                        <Link href={'/cadastro'}> Cadastrar-se</Link>
+                        Já possui uma conta?{' '}
+                        <Link href={'/login'}> Entrar</Link>
                     </span>
                 </section>
                 <section>

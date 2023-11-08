@@ -1,9 +1,9 @@
 import Link from 'next/link'
-
+import styles from '@/styles/Home.module.css'
 export default function Home() {
     return (
         <>
-            <main className="home">
+            <main className={styles['home']}>
                 <article>
                     <h4>Porto Seguro</h4>
                     <h1>Faça a vistoria da sua bike agora</h1>
