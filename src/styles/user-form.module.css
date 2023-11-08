@@ -1,4 +1,4 @@
-#root:has(.form-user) {
+body:has(.form-user) {
     display: flex;
     justify-content: center;
     align-items: center;

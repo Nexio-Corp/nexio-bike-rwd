@@ -31,8 +31,8 @@ export default function Login() {
                         <button type="submit">Entrar</button>
                     </form>
                     <span>
-                        Não tem uma conta ainda?
-                        <Link href={'/cadastro'}> Cadastrar-se</Link>
+                        Não tem uma conta ainda?{' '}
+                        <Link href={'/cadastro'}>Cadastrar-se</Link>
                     </span>
                 </section>
                 <section>
