@@ -1,33 +1,36 @@
-.faqplus{
+.faqplus {
     color: black;
     font-weight: 700;
     cursor: pointer;
 }
 
-.faqcard-container{
+.faqcard-container {
     margin-bottom: 1rem;
+    @media (min-width: 425px) {
+        width: 100%;
+    }
 }
 
-.faqcard-text-box{
+.faqcard-text-box {
     text-align: left;
     padding: 1rem;
     border: 1px solid #d9d9d9;
 }
 
-.faqcard-title-box{
+.faqcard-title-box {
     width: 100%;
     display: inline-flex;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.faqcard-list{
+.faqcard-list {
     padding: 1rem;
 }
 
-.hidden{
+.hidden {
     display: none;
 }

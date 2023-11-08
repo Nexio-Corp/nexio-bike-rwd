@@ -6,7 +6,7 @@ body:has(.faq) {
 }
 
 .faq {
-    padding: 6rem 10rem 8rem;
+    padding: 4rem;
     text-align: center;
 }
 
