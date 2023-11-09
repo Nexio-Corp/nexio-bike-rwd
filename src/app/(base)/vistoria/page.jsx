@@ -10,8 +10,8 @@ export default function BikeSurvey() {
             <main className={styles['bike-survey']}>
                 <h1>Envio das fotos:</h1>
                 <h4>*Tire a foto semelhante as imagens*</h4>
-                <div className={styles['bikes']}>
-                    <div className={styles['bike']}>
+                <form className={styles['bikes']}>
+                    {/* <div className={styles['bike']}>
                         <Image
                             width={300}
                             height={300}
@@ -22,7 +22,7 @@ export default function BikeSurvey() {
                             <p>Mostre a frente da bike:</p>
                             <button>Tirar foto</button>
                         </div>
-                    </div>
+                    </div> */}
                     <div className={styles['bike']}>
                         <Image
                             width={300}
@@ -32,10 +32,10 @@ export default function BikeSurvey() {
                         />
                         <div className={styles['bike-action']}>
                             <p>Mostre o lado direito da bike:</p>
-                            <button>Tirar foto</button>
+                            <input type="file" required />
                         </div>
                     </div>
-                    <div className={styles['bike']}>
+                    {/* <div className={styles['bike']}>
                         <Image
                             width={300}
                             height={300}
@@ -46,8 +46,9 @@ export default function BikeSurvey() {
                             <p>Mostre o lado esquerdo da bike:</p>
                             <button>Tirar foto</button>
                         </div>
-                    </div>
-                </div>
+                    </div> */}
+                    <button type="submit">Enviar</button>
+                </form>
             </main>
         </>
     )
