@@ -1,7 +1,14 @@
+'use client'
 import Link from 'next/link'
 import styles from '@/styles/BikeRegistration.module.css'
+import { useRouter } from 'next/navigation'
 
 export default function BikeRegistration() {
+    const router = useRouter()
+    const onSubmit = e => {
+        e.preventDefault()
+        router.push('/vistoria')
+    }
     return (
         <>
             <div className={styles['h1-registration']}>
@@ -12,10 +19,10 @@ export default function BikeRegistration() {
                 </h2>
             </div>
             <main className={styles['bike-registration']}>
-                <form>
+                <form onSubmit={onSubmit}>
                     <div className={styles['form-group']}>
-                        <label htmlFor="Marca">Marca*</label>
-                        <select name="Marca" id="Marca" required>
+                        <label htmlFor="marca">Marca*</label>
+                        <select name="marca" id="marca" required>
                             <option value="Trek">Trek</option>
                             <option value="Specialized">Specialized</option>
                             <option value="Giant">Giant</option>
@@ -24,25 +31,30 @@ export default function BikeRegistration() {
                         </select>
                     </div>
                     <div className={styles['form-group']}>
-                        <label htmlFor="Modelo">Modelo*</label>
-                        <input type="text" required />
+                        <label htmlFor="modelo">Modelo*</label>
+                        <input id="modelo" name="modelo" type="text" required />
                     </div>
                     <div className={styles['form-group']}>
-                        <label htmlFor="Modificacoess">Modificações*</label>
-                        <input type="text" required />
+                        <label htmlFor="mods">Modificações*</label>
+                        <input id="mods" name="mods" type="text" required />
                     </div>
                     <div className={styles['form-group']}>
-                        <label htmlFor="Valor">Valor*</label>
-                        <input type="text" required />
+                        <label htmlFor="valor">Valor*</label>
+                        <input
+                            id="valor"
+                            name="valor"
+                            type="number"
+                            step="any"
+                            min={1}
+                            required
+                        />
                     </div>
                     <div className={styles['form-group']}>
-                        <label htmlFor="Modelo">Nº Chassi*</label>
-                        <input type="text" required />
+                        <label htmlFor="numero">Nº Chassi*</label>
+                        <input id="numero" name="numero" type="text" required />
                     </div>
+                    <button type="submit">Finalizar</button>
                 </form>
-                <div className={styles['botao-finalizar']}>
-                    <Link href={'/vistoria'}>Finalizar</Link>
-                </div>
             </main>
         </>
     )

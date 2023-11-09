@@ -1,6 +1,5 @@
-
-.h1-registration h1{
-    color: #1E1E1E;
+.h1-registration h1 {
+    color: #1e1e1e;
     font-size: 2.375rem;
     font-weight: 600;
     text-align: center;
@@ -8,7 +7,7 @@
 }
 
 .h1-registration h2 {
-    text-align: center; 
+    text-align: center;
 }
 
 body:has(.bike-registration) {
@@ -17,15 +16,20 @@ body:has(.bike-registration) {
     background-size: cover;
     background-position: right;
 }
-.botao-finalizar a{
+.bike-registration button {
     font-size: 1.2rem;
     font-weight: bold;
+    width: 20%;
     background-color: #00a1fc;
     text-align: center;
     padding: 1rem;
     border-radius: 0.5rem;
+    margin: 0 auto;
+    @media (max-width: 768px) {
+        width: 50%;
+    }
 }
-.botao-finalizar{
+.botao-finalizar {
     margin-top: 1rem;
 }
 
@@ -36,16 +40,15 @@ body:has(.bike-registration) {
     margin-left: 10%;
 }
 
-.bike-registration input[type="text"],
+.bike-registration input,
 .bike-registration select {
-    width: 80%; 
-    height: 2.5rem;  
-    padding: 0.5rem; 
-    margin-bottom: 0.625rem; 
-    border-radius: 0.25rem; 
+    width: 80%;
+    height: 2.5rem;
+    padding: 0.5rem;
+    margin-bottom: 0.625rem;
+    border-radius: 0.25rem;
     margin-left: 10%;
 }
-
 
 .form-group {
     text-align: left;
@@ -57,7 +60,3 @@ body:has(.bike-registration) {
     flex-direction: column;
     height: 100vh;
 }
-
-
-
-
