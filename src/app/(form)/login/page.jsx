@@ -5,7 +5,26 @@ import { IoArrowBack } from 'react-icons/io5'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/user-form.module.css'
+import { useState } from 'react'
 export default function Login() {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const onSubmit = async e => {
+        e.preventDefault()
+        const user = {
+            email,
+            senha: password,
+        }
+        const req = await fetch('/api/login', {
+            method: 'POST',
+            body: JSON.stringify(user),
+        })
+        /**
+         * @type {{msg: "ok" | "refused" | "error"}}
+         */
+        const data = await req.json()
+        console.log(data)
+    }
     return (
         <>
             <main className={styles['form-user']}>
@@ -24,9 +43,17 @@ export default function Login() {
                         </div>
                     </section>
                     <h1>Bem-vindo(a) de volta</h1>
-                    <form action="#" onSubmit={e => e.preventDefault()}>
-                        <input type="text" placeholder="Email" />
-                        <input type="password" placeholder="Senha" />
+                    <form action="#" onSubmit={onSubmit}>
+                        <input
+                            type="text"
+                            placeholder="Email"
+                            onChange={e => setEmail(e.target.value)}
+                        />
+                        <input
+                            type="password"
+                            placeholder="Senha"
+                            onChange={e => setPassword(e.target.value)}
+                        />
                         <a href="#">Esqueceu a senha?</a>
                         <button type="submit">Entrar</button>
                     </form>
