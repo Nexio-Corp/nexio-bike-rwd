@@ -6,10 +6,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/user-form.module.css'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 export default function Cadastro() {
+    const router = useRouter()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
+    const [error, setError] = useState(false)
+    const [refused, setRefused] = useState(false)
     const onSubmit = async e => {
         e.preventDefault()
         if (password !== confirmPassword) {
@@ -28,7 +32,19 @@ export default function Cadastro() {
          * @type {{msg: "ok" | "refused" | "error"}}
          */
         const data = await req.json()
-        console.log(data)
+        if (data.msg === 'ok') {
+            localStorage.setItem('user', JSON.stringify(user))
+            router.push('/')
+        }
+        if (data.msg === 'refused') {
+            setRefused(true)
+        }
+        if (data.msg === 'error') {
+            setError(true)
+            console.error(
+                'Erro no cadastro, por favor tenha certeza que o servidor java está rodando normalmente, link do repositório do servidor:'
+            )
+        }
     }
     return (
         <>
@@ -92,6 +108,30 @@ export default function Cadastro() {
                         alt="Homem numa bicicleta"
                     />
                 </section>
+                <dialog open={error} className={error ? '' : styles['hidden']}>
+                    <div>
+                        <h1>Erro</h1>
+                        <p>
+                            Houve um erro ao tentar fazer o cadastro, tente
+                            novamente mais tarde ou acesse o console para mais
+                            detalhes
+                        </p>
+                        <button onClick={() => setError(false)}>Ok</button>
+                    </div>
+                </dialog>
+                <dialog
+                    open={refused}
+                    className={refused ? '' : styles['hidden']}
+                >
+                    <div>
+                        <h1>Recusado</h1>
+                        <p>
+                            Seu cadastro foi recusado, tenha certeza que você já
+                            não possui uma conta
+                        </p>
+                        <button onClick={() => setRefused(false)}>Ok</button>
+                    </div>
+                </dialog>
             </main>
         </>
     )

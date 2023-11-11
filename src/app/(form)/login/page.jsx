@@ -6,11 +6,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/user-form.module.css'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 export default function Login() {
+    const router = useRouter()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [error, setError] = useState(false)
+    const [refused, setRefused] = useState(false)
     const onSubmit = async e => {
         e.preventDefault()
+        setError(false)
+        setRefused(false)
         const user = {
             email,
             senha: password,
@@ -23,6 +29,19 @@ export default function Login() {
          * @type {{msg: "ok" | "refused" | "error"}}
          */
         const data = await req.json()
+        if (data.msg === 'ok') {
+            localStorage.setItem('user', JSON.stringify(user))
+            router.push('/')
+        }
+        if (data.msg === 'refused') {
+            setRefused(true)
+        }
+        if (data.msg === 'error') {
+            setError(true)
+            console.error(
+                'Erro no login, por favor tenha certeza que o servidor java está rodando normalmente, link do repositório do servidor: https://github.com/Nexio-Corp/porto-java'
+            )
+        }
         console.log(data)
     }
     return (
@@ -70,6 +89,29 @@ export default function Login() {
                         alt="Homem numa bicicleta"
                     />
                 </section>
+                <dialog open={error} className={error ? '' : styles['hidden']}>
+                    <div>
+                        <h1>Erro</h1>
+                        <p>
+                            Houve um erro ao tentar fazer login, tente novamente
+                            mais tarde ou acesse o console para mais detalhes
+                        </p>
+                        <button onClick={() => setError(false)}>Ok</button>
+                    </div>
+                </dialog>
+                <dialog
+                    open={refused}
+                    className={refused ? '' : styles['hidden']}
+                >
+                    <div>
+                        <h1>Teste</h1>
+                        <p>
+                            Email ou senha incorretos, verifique os dados e
+                            tente novamente
+                        </p>
+                        <button onClick={() => setRefused(false)}>Ok</button>
+                    </div>
+                </dialog>
             </main>
         </>
     )
