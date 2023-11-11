@@ -17,7 +17,13 @@ export default function Navbar() {
      * @type {React.MutableRefObject<HTMLDivElement>}
      */
     const hamburgerDiv = useRef(null)
-    const [user, setUser] = useState(localStorage.getItem('user'))
+    const [user, setUser] = useState(null)
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setUser(localStorage.getItem('user'))
+        }
+    }, [])
     const toggleLinks = () => {
         if (
             [...linksDiv.current.classList.values()].includes(styles['active'])
