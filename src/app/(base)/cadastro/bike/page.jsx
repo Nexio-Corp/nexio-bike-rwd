@@ -1,16 +1,12 @@
 'use client'
 import styles from '@/styles/BikeRegistration.module.css'
 import { useRouter } from 'next/navigation'
-import { useEffect } from 'react'
 
 export default function BikeRegistration() {
     const router = useRouter()
-    useEffect(() => {
-        if (typeof window !== 'undefined' && !localStorage.getItem('user')) {
-            router.push('/cadastro')
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    if (!localStorage.getItem('user')) {
+        router.push('/cadastro')
+    }
     const onSubmit = e => {
         e.preventDefault()
         router.push('/vistoria')
