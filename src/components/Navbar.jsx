@@ -57,6 +57,16 @@ export default function Navbar() {
 
     return (
         <>
+            {/* Isso é para fazer o css não ser otimizado na hora do build */}
+            <span
+                className={
+                    styles['active'] +
+                    ' ' +
+                    styles['deactivating'] +
+                    ' ' +
+                    styles['hidden']
+                }
+            ></span>
             <nav className={styles['navbar']}>
                 <Link href="/">
                     <Image
