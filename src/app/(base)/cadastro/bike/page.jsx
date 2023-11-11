@@ -1,10 +1,12 @@
 'use client'
-import Link from 'next/link'
 import styles from '@/styles/BikeRegistration.module.css'
 import { useRouter } from 'next/navigation'
 
 export default function BikeRegistration() {
     const router = useRouter()
+    if (!localStorage.getItem('user')) {
+        router.push('/cadastro')
+    }
     const onSubmit = e => {
         e.preventDefault()
         router.push('/vistoria')

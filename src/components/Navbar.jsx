@@ -1,7 +1,7 @@
 'use client'
 import portoLogo from '/public/static/porto.svg'
 import { GiHamburgerMenu as HamburgerIcon } from 'react-icons/gi'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/Navbar.module.css'
@@ -17,7 +17,7 @@ export default function Navbar() {
      * @type {React.MutableRefObject<HTMLDivElement>}
      */
     const hamburgerDiv = useRef(null)
-
+    const [user, setUser] = useState(localStorage.getItem('user'))
     const toggleLinks = () => {
         if (
             [...linksDiv.current.classList.values()].includes(styles['active'])
@@ -65,9 +65,23 @@ export default function Navbar() {
                     <Link href="/planos">Planos</Link>
                     <Link href="/faq">Duvidas Frequentes</Link>
                     <Link href="/nexio">Equipe</Link>
-                    <Link className={styles['login']} href="/login">
-                        Entrar
-                    </Link>
+                    {!user ? (
+                        <Link className={styles['login']} href="/login">
+                            Entrar
+                        </Link>
+                    ) : (
+                        <Link
+                            className={styles['login']}
+                            onClick={e => {
+                                e.preventDefault()
+                                localStorage.removeItem('user')
+                                setUser(null)
+                            }}
+                            href={'#'}
+                        >
+                            Sair
+                        </Link>
+                    )}
                 </div>
                 <div
                     className={styles['hamburger']}
