@@ -59,7 +59,7 @@ export default function BikeRegistration() {
                         <label htmlFor="numero">Nº Chassi*</label>
                         <input id="numero" name="numero" type="text" required />
                     </div>
-                    <button type="submit">Finalizar</button>
+                    <button type="submit">Ir para Vistoria</button>
                 </form>
             </main>
         </>
